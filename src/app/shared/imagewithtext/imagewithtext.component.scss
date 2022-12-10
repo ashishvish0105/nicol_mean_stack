@@ -1,0 +1,25 @@
+$primary-color: #ff7272;
+$border-color: #525357;
+$link-color: #ff7272;
+$body-text-color: #d9d9d9;
+$text-color: #fff;
+
+
+.image-with-text {
+    .main-box {
+        .image-with {
+            max-width: 85%;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .with-text {
+            .category {
+                color: $link-color;
+                text-transform: capitalize;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}

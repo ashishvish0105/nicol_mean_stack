@@ -1,0 +1,108 @@
+<section class="bg-dark text-white">
+  <div class="container globel-space-top globel-space-bottom">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="header">{{ othername }}</h1>
+        <p *ngIf="othername.length">
+          the above value is subject variable for the practices
+        </p>
+        <div class="input-group mb-3">
+          <input
+            #inputname
+            type="text"
+            class="form-control"
+            placeholder="Recipient's username"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+          />
+          <button
+            (click)="setsubjecty(inputname.value)"
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon2"
+          >
+            Button
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mx-0 mb-5">
+      <div class="col-md-8">
+        <app-sub-title-heading-box
+          subTitle="ashish"
+          [Isbutton]="true"
+          specialTitle="specialTitle"
+          nomalTile="nomalTile"
+          subTitlebutton="subTitlebutton"
+        ></app-sub-title-heading-box>
+      </div>
+    </div>
+    <div class="super-layout-box">
+      <div class="row">
+        <div class="col-md-4 top-space-box">
+          <app-imagewithtext></app-imagewithtext>
+        </div>
+        <div class="col-md-4">
+          <app-imagewithtext></app-imagewithtext>
+        </div>
+        <div class="col-md-4 nagetive-top-space-box">
+          <app-imagewithtext></app-imagewithtext>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-slider globel-space-top">
+      <div class="slide-iterm">
+        <figure class="image">
+          <img
+            src="../../../../assets/images/banner page/portfolio-016.jpg"
+            alt=""
+          />
+        </figure>
+        <h5 class="name">ashish</h5>
+        <p class="roll">Architechture</p>
+      </div>
+      <div class="slide-iterm">
+        <figure class="image">
+          <img
+            src="../../../../assets/images/banner page/portfolio-016.jpg"
+            alt=""
+          />
+        </figure>
+        <h5 class="name">ashish</h5>
+        <p class="roll">Architechture</p>
+      </div>
+      <div class="slide-iterm">
+        <figure class="image">
+          <img
+            src="../../../../assets/images/banner page/portfolio-016.jpg"
+            alt=""
+          />
+        </figure>
+        <h5 class="name">ashish</h5>
+        <p class="roll">Architechture</p>
+      </div>
+      <div class="slide-iterm">
+        <figure class="image">
+          <img
+            src="../../../../assets/images/banner page/portfolio-016.jpg"
+            alt=""
+          />
+        </figure>
+        <h5 class="name">ashish</h5>
+        <p class="roll">Architechture</p>
+      </div>
+      <div class="slide-iterm">
+        <figure class="image">
+          <img
+            src="../../../../assets/images/banner page/portfolio-016.jpg"
+            alt=""
+          />
+        </figure>
+        <h5 class="name">ashish</h5>
+        <p class="roll">Architechture</p>
+      </div>
+    </div>
+  </div>
+</section>

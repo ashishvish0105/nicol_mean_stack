@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://product-96e6c-default-rtdb.firebaseio.com",
+    "secure": false
+  }
+}

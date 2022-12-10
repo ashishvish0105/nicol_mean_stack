@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Hero-Bold;
+    src: url(../src/assets/font/Hero-Bold.ttf);
+}
+
+$primary-color: #ff7272;
+$border-color: #525357;
+$link-color: #ff7272;
+$body-text-color: #d9d9d9;
+$text-color: #fff;
+
+body {
+    color: $body-text-color;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 700;
+    font-family: Hero-Bold;
+    line-height: 1.2;
+    color: $body-text-color;
+}
+
+h2 {
+    font-size: 64px;
+    font-weight: 700;
+    font-family: Hero-Bold;
+    line-height: 1.2;
+    color: $body-text-color;
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: Hero-Bold;
+    line-height: 1.2;
+    color: $body-text-color;
+}
+
+h4 {
+    font-size: 28px;
+    font-weight: 700;
+    font-family: Hero-Bold;
+    line-height: 1.2;
+    color: $body-text-color;
+}
+
+h5 {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Hero-Bold;
+    line-height: 1.2;
+    color: $body-text-color;
+}
+
+h6 {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Hero-Bold;
+    line-height: 1.2;
+    color: $body-text-color;
+}
+
+img {
+    width: 100%;
+}
+
+.globel-space-both {
+    padding: 200px 0;
+}
+
+.margin-globel-space-both {
+    margin: 200px 0;
+}
+
+.globel-space-top {
+    padding-top: 200px;
+}
+
+.globel-space-bottom {
+    padding-bottom: 200px;
+}
+
+.globel-space-left {
+    padding-left: 50px;
+}
+
+.globel-space-right {
+    padding-right: 50px;
+}
+
+.globel-space-both-side {
+    padding: 0 50px;
+}
+
+input {
+    &.form-control {
+        border: none;
+        border-bottom: 1px solid $border-color;
+        border-radius: 0;
+        padding: 0;
+        font-size: 16px;
+        background-color: transparent;
+        color: $body-text-color;
+
+        &::placeholder {
+            color: $body-text-color;
+        }
+
+        &:focus {
+            color: inherit;
+            background-color: inherit;
+            border-color: none;
+            outline: 0;
+            box-shadow: none;
+            border-bottom: 1px solid $border-color;
+        }
+    }
+
+
+
+}
+
+.globel-link {
+    color: $link-color;
+
+    &:hover {
+        cursor: pointer;
+        color: $link-color;
+    }
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+input[type="checkbox"] {
+    border-radius: 0 !important;
+}
+
+.login-page {
+    background-color: black;
+}
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $border-color;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $primary-color;
+}

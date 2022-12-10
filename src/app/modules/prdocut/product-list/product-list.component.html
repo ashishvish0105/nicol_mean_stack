@@ -1,0 +1,73 @@
+<div class="container py-4">
+  <div class="row g-4">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6">
+          <app-button
+            routerLink="add product"
+            buttonLabel="view more"
+          ></app-button>
+        </div>
+        <div class="col-md-6">
+          <div class="input-group mb-3">
+            <input
+              #searning
+              type="text"
+              class="form-control"
+              placeholder="Recipient's username"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+              style="color: #ff7272"
+            />
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="button-addon2"
+              (click)="changevalue(searning.value)"
+            >
+              Button
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4" *ngFor="let product of allProductlsit">
+      <div class="proudct-card">
+        <div class="product-name-info">
+          <div class="pruduct-info">
+            <h5 class="product-name">{{ product.productName }}</h5>
+            <p class="product-descripttion">{{ product.description }}</p>
+          </div>
+          <div class="product-price-box">
+            <span class="product-price-icon"
+              ><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i
+            ></span>
+            <span class="product-price">{{ product.price }}</span>
+          </div>
+        </div>
+        <hr />
+        <div class="product-other-info">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              category : <strong>{{ product.category }}</strong>
+            </li>
+            <li class="list-group-item">
+              clothSize : <strong>{{ product.clothSize }}</strong>
+            </li>
+            <li class="list-group-item">
+              inStock : <strong>{{ product.inStock }}</strong>
+            </li>
+            <li class="list-group-item">
+              price : <strong>{{ product.price }}</strong>
+            </li>
+          </ul>
+          <hr />
+          <app-button
+            routerLink="product/{{ product._id }}"
+            buttonLabel="view more"
+          ></app-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,136 @@
+<header>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg py-0">
+      <div class="container-fluid">
+        <a class="navbar-brand" routerLink="home"
+          ><img
+            class="logo-image"
+            src="../../../assets/images/project component/LOgo.svg"
+            alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                id="navbarDropdown"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                href="javascript:void(0)"
+                >Home</a
+              >
+              <ul
+                class="dropdown-menu inner-box"
+                aria-labelledby="navbarDropdown"
+              >
+                <li class="dropdown-item-cms">
+                  <a routerLink="home/slide page">Slider Product</a>
+                </li>
+                <li class="dropdown-item-cms">
+                  <a routerLink="product">Another action</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="contact us">contact us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="products"> product </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="student">student</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                id="navbarDropdown"
+                href="javascript:void(0)"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >firebase</a
+              >
+              <ul
+                class="dropdown-menu inner-box"
+                aria-labelledby="navbarDropdown"
+              >
+                <li class="dropdown-item-cms">
+                  <a routerLink="fireBase Products">Product</a>
+                </li>
+                <li class="dropdown-item-cms">
+                  <a href="#">Another action</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="fireBase Products">Product</a>
+            </li>
+          </ul>
+          <!-- <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form> -->
+          <div *ngIf="userinfo" class="user-information">
+            <div class="d-flex align-items-center">
+              <div [class.active]="toggelClass" class="user-related">
+                <span (click)="toggleClick()" class="user-icon mt-2">
+                  <i class="fa-regular fa-user"></i>
+                </span>
+                <div class="user-infor ms-2">
+                  <div class="user-related-info">
+                    <b class="user-infor-name">{{ userinfo?.username }}</b>
+                    <p class="user-infor-description ms-3 mt-2">
+                      - {{ userinfo?.usertype }}
+                    </p>
+                    <hr />
+                    <div class="login-other-info">
+                      <div
+                        *ngIf="!userinfo?.username"
+                        (click)="loginUser()"
+                        class="icon-with-text"
+                      >
+                        <span class="icon"
+                          ><i class="fa-solid fa-right-to-bracket"></i
+                        ></span>
+                        <b class="mx-3 d-inline-block">sign in</b>
+                      </div>
+                      <div
+                        *ngIf="userinfo?.username"
+                        class="icon-with-text"
+                        (click)="logoutUser()"
+                      >
+                        <span class="icon"
+                          ><i class="fa-solid fa-right-to-bracket"></i
+                        ></span>
+                        <b class="mx-3 d-inline-block">sign out</b>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

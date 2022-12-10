@@ -1,0 +1,148 @@
+$product-bg-color: #151727;
+$primary-color: #ff7272;
+$border-color: #525357;
+$body-text-color: #d9d9d9;
+$text-color: #fff;
+
+.product {
+    background: $product-bg-color;
+    border-radius: 10px;
+    color: $text-color;
+    padding: 30px 40px;
+
+    .product-name-info {
+        display: flex;
+
+        .pruduct-info {
+            width: 100%;
+        }
+
+        .product-price-box {
+            font-size: 35px;
+            font-weight: 700;
+            display: flex;
+            color: $primary-color;
+
+            .product-price-icon {
+                margin-left: 10px;
+            }
+
+            .product-price {
+
+                display: block;
+                margin-left: 10px;
+                text-align: end;
+            }
+        }
+    }
+
+    .list-group {
+
+        .list-group-item {
+            background: transparent;
+            color: $body-text-color;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+}
+
+
+
+
+.user-information {
+    text-transform: capitalize;
+
+    .user-icon {
+        font-size: 15px;
+        padding: 4px 8px;
+        color: #ff7272;
+        border: 2px solid currentColor;
+        border-radius: 8px;
+    }
+
+    .user-infor {
+        .user-infor-name {
+            font-size: 14px;
+            line-height: 1;
+            vertical-align: middle;
+        }
+
+        .user-infor-description {
+            font-size: 12px;
+            line-height: 1;
+            margin-bottom: 0;
+            text-transform: lowercase;
+        }
+    }
+}
+
+.product {
+    position: relative;
+
+    .user-related {
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        display: inline-block;
+    }
+}
+
+
+
+.user-infor {
+    display: none;
+
+}
+
+.active .user-infor {
+    display: block;
+}
+
+.user-infor {
+    position: absolute;
+    right: calc(100% - 40px);
+    bottom: 0;
+    top: calc(100% + 20px);
+    z-index: 999;
+}
+
+.user-related-info {
+    padding: 10px 15px 15px;
+    width: 200px;
+    border-radius: 5px;
+    background: black;
+}
+
+.icon-with-text {
+    padding: 10px 15px;
+    background-color: rgb(85, 79, 79);
+    margin-bottom: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+.form-control-group {
+    margin-bottom: 15px;
+
+    .description {
+        margin-bottom: 1rem;
+    }
+
+    .productName {
+        font-size: 24px;
+        font-weight: 700;
+        font-family: Hero-Bold;
+        line-height: 1.2;
+        color: #d9d9d9;
+    }
+
+    input {
+        max-width: 100%;
+        width: 350px;
+
+    }
+}

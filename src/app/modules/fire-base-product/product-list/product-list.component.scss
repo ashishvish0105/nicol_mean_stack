@@ -1,0 +1,27 @@
+.icon-image {
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 50px;
+    background: gray;
+
+    img {
+        object-fit: cover;
+        height: 100%;
+    }
+}
+
+th {
+    white-space: nowrap;
+}
+
+.card {
+
+    img {
+        background-color: gray;
+        height: 200px;
+        min-height: 200px;
+        ;
+    }
+}

@@ -1,0 +1,67 @@
+$primary-color: #ff7272;
+$link-color: #ff7272;
+$body-text-color: #d9d9d9;
+$text-color: #fff;
+
+
+.login-content {
+    position: relative;
+    padding-top: 20px;
+
+    .extra-menu-btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: $primary-color ;
+        color: $body-text-color;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+    }
+
+}
+
+.advance-login {
+    display: none;
+}
+
+.register-detail {
+    .register-detail-text {
+        line-height: 30px;
+
+    }
+
+    .sign-btn {
+        a {
+            color: inherit;
+            font-size: inherit;
+        }
+
+        font-weight: 700;
+        color: $link-color;
+        font-size: 25px;
+        margin-left: 10px;
+    }
+}
+
+
+input {
+    &.form-control {
+        line-height: 60px;
+    }
+}
+
+.password-box {
+    position: relative;
+
+    .show-password {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 5px  15px;
+    }
+}

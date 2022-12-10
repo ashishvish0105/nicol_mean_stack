@@ -1,0 +1,10 @@
+<div class="sub-title-heading-box">
+  <h6 class="sub-title">{{ subTitle }}</h6>
+  <h2 class="heading">
+    {{ nomalTile }} <span class="special-text"> {{ specialTitle }}</span>
+  </h2>
+  <p *ngIf="description" class="header-description">
+    {{ description }}
+  </p>
+  <app-button *ngIf="Isbutton" [buttonLabel]="subTitlebutton"></app-button>
+</div>

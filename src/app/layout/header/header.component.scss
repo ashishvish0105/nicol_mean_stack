@@ -1,0 +1,113 @@
+$primary-color: #ff7272;
+$link-color: #ff7272;
+$body-text-color: #d9d9d9;
+$text-color: #fff;
+$background-color: #151727;
+
+header {
+    background: $background-color;
+    padding: 15px 30px;
+
+    .logo-image {
+        width: 120px;
+    }
+
+    .navbar {
+        .nav-item {
+            a {
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                color: $text-color;
+            }
+        }
+
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+    }
+
+    .user-information {
+        margin-left: 10px;
+        text-transform: capitalize;
+
+        .user-icon {
+            font-size: 15px;
+            padding: 4px 8px;
+            color: #ff7272;
+            border: 2px solid currentColor;
+            border-radius: 8px;
+        }
+
+        .user-infor {
+            .user-infor-name {
+                font-size: 14px;
+                line-height: 1;
+                vertical-align: middle;
+            }
+
+            .user-infor-description {
+                font-size: 12px;
+                line-height: 1;
+                margin-bottom: 0;
+                text-transform: lowercase;
+            }
+        }
+    }
+}
+
+
+.user-related {
+    position: relative;
+}
+
+.user-infor {
+    display: none;
+
+}
+
+.active .user-infor {
+    display: block;
+}
+
+.user-infor {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: calc(100% + 40px);
+    z-index: 99;
+}
+
+.user-related-info,
+.inner-box {
+    padding: 10px 15px 15px;
+    max-width: 250px;
+    width: 250px;
+    border-radius: 5px;
+    background: black;
+}
+
+.icon-with-text {
+    padding: 10px 15px;
+    background-color: rgb(85, 79, 79);
+    margin-bottom: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown-item-cms {
+    background-color: transparent;
+    padding: 10px 15px;
+}
+
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        position: absolute;
+        top: calc(100% + 20px);
+    }
+}

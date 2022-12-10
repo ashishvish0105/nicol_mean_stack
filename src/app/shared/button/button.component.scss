@@ -1,0 +1,72 @@
+$primary-color: #ff7272;
+$link-color: #ff7272;
+$text-color: #fff;
+
+button {
+    display: inline-flex;
+    display: -ms-inline-flexbox;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    .button-text{
+        padding: 0px 8px 4px;
+        &::first-letter{
+            text-transform: uppercase;
+        }
+    }
+    &.main-button {
+        padding: 15px 30px;
+        border: none;
+        line-height: 1;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        background-color: $primary-color;
+        border-radius: 5px;
+        color: $text-color;
+
+        .left-content-btn {
+            height: 2px;
+            width: 0px;
+            background: white;
+            border-radius: 5px;
+            transition: width 0.5s;
+        }
+
+        .right-content-btn {
+            position: relative;
+            padding-left: 34px;
+            overflow: hidden;
+            transition: padding-left 0.5s;
+
+            &::before {
+                content: "";
+                position: absolute;
+                right: 4px;
+                top: 50%;
+                transform: translateY(-50%);
+                bottom: 0;
+                height: 2px;
+                width: 100%;
+                background: white;
+                border-radius: 5px;
+            }
+        }
+
+        &:hover {
+            .left-content-btn {
+                width: 34px;
+            }
+
+            .right-content-btn {
+                padding-left: 0px;
+                transition: padding-left 0.5s;
+
+                &::before {
+                    width: 0px;
+                    transition: width 0.5s;
+                }
+            }
+        }
+    }
+}

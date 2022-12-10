@@ -1,0 +1,16 @@
+{
+    "data": [
+        {
+            "username": "ashishadmin",
+            "password": "ashish@0105",
+            "email": "ashish01@gmail.com",
+            "usertype": "admin"
+        },
+        {
+            "password": "ashish@0105",
+            "email": "ashish01@gmail.com",
+            "username": "ashishuser",
+            "usertype": "user"
+        }
+    ]
+}

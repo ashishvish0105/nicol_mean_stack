@@ -1,0 +1,23 @@
+// // for mouser move
+
+// $primary-color: #ff7272;
+
+// .mouse-hover {
+//     position: relative;
+//     height: 0;
+//     width: 0;
+//     &::after {
+//         content: '';
+//         position: fixed;
+//         top: inherit;
+//         left: inherit;
+//         transform: translate(-50%, -50%);
+//         height: 40px;
+//         width: 40px;
+//         border-radius: 50%;
+//         border: 2px solid $primary-color;
+//         transition: all 0.2s linear;
+//         z-index: 99999;
+//         background: transparent;
+//     }
+// }

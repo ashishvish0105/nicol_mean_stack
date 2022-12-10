@@ -1,0 +1,98 @@
+<div class="container">
+  <div class="heading mb-5">
+    <div class="d-flex align-items-center">
+      <h1>{{ editModu ? "edit Product" : "product on firebase" }}</h1>
+      <a
+        class="btn btn-primary ms-auto"
+        routerLink="/dashboard/fireBase Products"
+        >list of product</a
+      >
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 m-auto">
+      <form [formGroup]="productForm" (ngSubmit)="submit()">
+        <div class="image-set mb-3">
+          <img src="{{imageshow}}"  alt="" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >product Image</label
+          >
+          <input
+            type="file"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            (change)="handleInputChange($event)"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">productName</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            formControlName="productName"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail12" class="form-label"
+            >productDetail</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail12"
+            aria-describedby="emailHelp"
+            formControlName="productDetail"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail13" class="form-label"
+            >productPrice</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail13"
+            aria-describedby="emailHelp"
+            formControlName="productPrice"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label"
+            >productCatagory</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputPassword1"
+            formControlName="productCatagory"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label"
+            >productRelated</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputPassword1"
+            formControlName="productRelated"
+          />
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1"
+            >Check me out</label
+          >
+        </div>
+        <button type="submit" class="btn btn-primary">
+          {{ editModu ? "Edit Product" : "Submit Product" }}
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

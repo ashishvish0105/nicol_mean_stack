@@ -1,0 +1,190 @@
+<div class="container py-5">
+  <div class="product">
+    <div *ngIf="product" class="user-information">
+      <div [class.active]="toggelClass" class="user-related">
+        <span (click)="toggleClick()" class="user-icon mt-2">
+          <i class="fa-regular fa-user"></i>
+        </span>
+        <div class="user-infor ms-2">
+          <div class="user-related-info">
+            <b class="user-infor-name">actiion</b>  
+            <hr />
+            <div class="login-other-info">
+              <div class="icon-with-text">
+                <span class="icon"
+                  ><i class="fa-solid fa-pen-to-square"></i
+                ></span>
+                <b class="mx-3 d-inline-block" (click)="editProduct()">Edit</b>
+              </div>
+              <div class="icon-with-text">
+                <span class="icon"><i class="fa-solid fa-trash"></i></span>
+                <b class="mx-3 d-inline-block">Delete</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!editMode" class="product-detail">
+      <div class="proudct-card">
+        <div class="product-name-info">
+          <div class="pruduct-info">
+            <h5 class="product-name">{{ product.productName }}</h5>
+            <p class="product-descripttion">{{ product.description }}</p>
+          </div>
+          <!-- <div class="product-price-box">
+            <span class="product-price-icon"
+              ><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i
+            ></span>
+            <span class="product-price">{{ product.price }}</span>
+          </div> -->
+        </div>
+        <hr />
+        <div class="product-other-info">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              category : <strong>{{ product.category }}</strong>
+            </li>
+            <li class="list-group-item">
+              clothSize : <strong>{{ product.clothSize }}</strong>
+            </li>
+            <li class="list-group-item">
+              inStock : <strong>{{ product.inStock }}</strong>
+            </li>
+            <li class="list-group-item">
+              price : <strong>{{ product.price }}</strong>
+            </li>
+          </ul>
+          <hr />
+          <app-button
+            routerLink="product/{{ product._id }}"
+            buttonLabel="view more"
+          ></app-button>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="editMode" class="editProduct mt-5">
+      <form [formGroup]="productForm">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="row g-4">
+              <div class="col-md-12">
+                <div class="form-control">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >Product Name</label
+                  >
+                  <input
+                    type="email"
+                    autocomplete="off"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="productName"
+                    formControlName="productName"
+                  />
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-control">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >category</label
+                  >
+                  <select formControlName="Category" class="form-control">
+                    <option value="">seletect category</option>
+                    <option *ngFor="let cat of category">
+                      {{ cat.Category }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-control">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >description</label
+                  >
+
+                  <textarea
+                    class="form-control"
+                    placeholder="Leave a comment here"
+                    id="floatingTextarea2"
+                    formControlName="description"
+                    style="height: 100px"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row g-4">
+              <div class="col-md-12">
+                <div class="form-control">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >clothSize</label
+                  >
+                  <select formControlName="clothSize" class="form-control">
+                    <option value="">seletect size</option>
+                    <option *ngFor="let productSize of productSizeList">
+                      {{ productSize.size }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-control">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >price</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="price"
+                    formControlName="price"
+                  />
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-control">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault1"
+                      formControlName="InStock"
+                      value="In Stock"
+                      checked
+                    />
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Is Stock
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault2"
+                      formControlName="InStock"
+                      value="Out Of Stock"
+                      checked
+                    />
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Out Of Stock
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <app-button
+              (click)="submitdata(productForm.value)"
+              buttonLabel="submit"
+            ></app-button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

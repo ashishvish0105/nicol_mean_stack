@@ -1,0 +1,21 @@
+.image-box {
+    min-width: 500px;
+    display: inline-block;
+    height: 400px;
+
+    img {
+        object-fit: cover;
+        height: 100%;
+    }
+}
+
+.slider-image {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin: 50px 0;
+}
+
+.imageslide {
+    overflow: hidden;
+}

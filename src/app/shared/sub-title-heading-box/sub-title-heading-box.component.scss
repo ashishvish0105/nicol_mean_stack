@@ -1,0 +1,121 @@
+$primary-color: #ff7272;
+$dash-line-color: #fff;
+$paragraph-color: #d0d0d0;
+
+.sub-title-heading-box {
+    .sub-title {
+        margin-bottom: 16px;
+        letter-spacing: 2px;
+        color: $primary-color;
+        position: relative;
+        padding: 0 50px;
+        display: inline-block;
+        text-transform: uppercase;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            right: 0;
+            width: 40px;
+            height: 2px;
+            border-radius: 5px;
+            transform: translateY(-50%);
+            background-color: $dash-line-color;
+        }
+
+        &::after {
+            left: auto;
+            right: 0;
+        }
+    }
+
+    .heading {
+        margin-bottom: 0px;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+        .special-text {
+            position: relative;
+            display: inline-block;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 85%;
+                height: 5px;
+                background: $primary-color;
+                border-radius: 10px;
+            }
+
+            &::before {
+                $pointer-size: 7px;
+                content: "";
+                position: absolute;
+                right: 8px;
+                bottom: 0;
+                width: $pointer-size;
+                height: $pointer-size;
+                background: $primary-color;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .header-description {
+        font-size: 18px;
+        color: $paragraph-color;
+        margin: 15px 0 30px;
+    }
+}
+
+// h2:last-word {
+//     color: red;
+// }
+// h2:first-child::nth-line(-n+2) {
+//     font-variant-caps: small-caps;
+//     color: red;
+//   }
+
+// h2:first-child {
+//     color: green;
+// }
+
+// h2:last-child {
+//     color: pink;
+// }
+
+// h2:nth-child {
+//     color: yellow;
+// }
+
+// h2:nth-last-child {
+//     color: brown;
+// }
+
+// h2:first-of-type {
+//     color: orange;
+// }
+
+// h2:last-of-type {
+//     color: silver;
+// }
+
+// h2:nth-of-type {
+//     color: darkblue;
+// }
+
+// h2:nth-last-of-type {
+//     color: darkgoldenrod;
+// }
+
+// h2:only-child {
+//     color: darkmagenta;
+// }
+
+// h2:only-of-type {
+//     color: darkkhaki;
+// }
